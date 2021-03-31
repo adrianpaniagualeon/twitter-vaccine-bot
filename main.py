@@ -7,7 +7,6 @@ import json
 from datetime import date, datetime
 from datetime import timedelta
 import cv2
-import numpy as np
 import os
 import unicodedata 
 
