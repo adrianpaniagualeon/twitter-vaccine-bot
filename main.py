@@ -22,7 +22,7 @@ CONSUMER_SECRET =os.environ['CONSUMER_SECRET_VACCINE']
 ACCESS_TOKEN= os.environ['ACCESS_TOKEN_VACCINE']
 ACCESS_TOKEN_SECRET =os.environ['ACCESS_TOKEN_SECRET_VACCINE']
 
-
+	
 
 today = date.today()
 today = today - timedelta(days=1)
@@ -70,8 +70,8 @@ cv2.imwrite('output.png', image)
 
 
 
-auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
-auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 api.update_with_media("output.png", "La vacunación contra la COVID-19 avanza en León. Estos son los datos acumulados a dia de hoy ("+str(today)+"). Más info en: https://bit.ly/2PLqzwk")
