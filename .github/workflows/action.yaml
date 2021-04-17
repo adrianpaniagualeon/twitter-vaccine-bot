@@ -1,7 +1,6 @@
 name: Vaccine Leon Bot
 on:
-  schedule:
-  - cron: "0 18 * * *"
+  push
 
 jobs:
   build:
