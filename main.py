@@ -17,12 +17,13 @@ def remove_accents(text):
 			text = text.replace(acen, acentos[acen])
 	return text
 
+
 CONSUMER_KEY= os.environ['CONSUMER_KEY_VACCINE']
 CONSUMER_SECRET =os.environ['CONSUMER_SECRET_VACCINE']
 ACCESS_TOKEN= os.environ['ACCESS_TOKEN_VACCINE']
 ACCESS_TOKEN_SECRET =os.environ['ACCESS_TOKEN_SECRET_VACCINE']
 
-	
+
 
 today = date.today()
 today = today - timedelta(days=1)
@@ -57,13 +58,13 @@ for i in range (rows):
 		dosis[i] = resp['records'][i]['fields']['dosis_administradas_acumulado']
 		ciclo[i] = resp['records'][i]['fields']['personas_vacunadas_ciclo_completo_acumulado']
 		cv2.putText(image, remove_accents(grupo[i]).upper(), (220, posicion), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-		cv2.putText(image, str(dosis[i]), (70, posicion), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+		cv2.putText(image, str(dosis[i]), (70, posicion), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 2)
 		posicion = posicion + 85 
 		total = total + dosis[i]
 		print ("\n\n"+str(grupo[i])+"\n"+str(dosis[i])+"\n"+str(ciclo[i]))
 
 today = today.strftime("%d-%m-%Y")
-cv2.putText(image, str(total), (1150, 580), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 255), 2)
+cv2.putText(image, str(total), (1150, 580), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 0), 2)
 cv2.putText(image, str(today), (1160, 270), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 cv2.imwrite('output.png', image)
 
