@@ -1,6 +1,6 @@
 # COVID Vaccine BOT León
 [![Vaccine Leon Bot](https://github.com/adrianpaniagualeon/twitter-vaccine-bot/actions/workflows/action.yaml/badge.svg)](https://github.com/adrianpaniagualeon/twitter-vaccine-bot/actions/workflows/action.yaml)
-
+[![Vaccine Leon Bot (DATES)](https://github.com/adrianpaniagualeon/twitter-vaccine-bot/actions/workflows/puntos-vacunacion.yaml/badge.svg)](https://github.com/adrianpaniagualeon/twitter-vaccine-bot/actions/workflows/puntos-vacunacion.yaml)
 ## ¿Qué hace este bot?
 Este BOT de Twitter publica diariamente los datos del progreso de la vacunación en León obtenidos del portal de datos abiertos de la Junta de Castilla y León.
 
